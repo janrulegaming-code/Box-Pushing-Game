@@ -29,7 +29,7 @@ public class Box extends TileObject{
             }
         }
         if(dir == 0){
-            if(checkIfHasTile(x,y-1,new Wall(level))||checkIfHasTile(x,y-1,new Box(level))){
+            if(checkIfHasTile(x,y-1,new Wall(level))||checkIfHasTile(x,y-1,new Box(level))||checkIfHasTile(x,y-1, new Player(level))){
                 return false;
             }
             else{
@@ -39,7 +39,7 @@ public class Box extends TileObject{
             }
         }
         if(dir == 1){
-            if(checkIfHasTile(x+1,y,new Wall(level))||checkIfHasTile(x+1,y,new Box(level))){
+            if(checkIfHasTile(x+1,y,new Wall(level))||checkIfHasTile(x+1,y,new Box(level))|| checkIfHasTile(x+1,y,new Player(level))){
                 return false;
             }
             else{
@@ -49,7 +49,7 @@ public class Box extends TileObject{
             }
         }
         if(dir == 2){
-            if(checkIfHasTile(x,y+1,new Wall(level))||checkIfHasTile(x,y+1,new Box(level))){
+            if(checkIfHasTile(x,y+1,new Wall(level))||checkIfHasTile(x,y+1,new Box(level))||checkIfHasTile(x,y+1,new Player(level))){
                 return false;
             }
             else{
@@ -59,7 +59,7 @@ public class Box extends TileObject{
             }
         }
         if(dir == 3){
-            if(checkIfHasTile(x-1,y,new Wall(level))||checkIfHasTile(x-1,y,new Box(level))){
+            if(checkIfHasTile(x-1,y,new Wall(level))||checkIfHasTile(x-1,y,new Box(level))|| checkIfHasTile(x-1,y,new Player(level))){
                 return false;
             }
             else{

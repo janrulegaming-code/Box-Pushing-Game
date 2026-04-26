@@ -49,5 +49,11 @@ public class LevelSelect extends Scene{
         for(int i = 0; i < levels.size(); i++){
             levels.get(i).draw(g);
         }
+        g.setFont(new Font("Arial", Font.BOLD, 30));
+        g.setColor(Color.BLACK);
+        g.drawString("Level Select",Const.screenWidth/2-250,Const.screenHeight/2-200);
+        for(int i = 0; i < levels.size(); i++){
+            g.drawString((i+1)+"",250 + 110*i,260);
+        }
     }
 }

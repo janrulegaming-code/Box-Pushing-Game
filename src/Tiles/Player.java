@@ -32,7 +32,7 @@ public class Player extends TileObject{
             enteringX = x;
             enteringY = y-1;
             boolean pushableBox = true;
-            if(!checkIfHasTile(enteringX, enteringY, new Wall(level))){
+            if(!(checkIfHasTile(enteringX, enteringY, new Wall(level)) || checkIfHasTile(enteringX, enteringY, new Player(level)))){
                 if(checkIfHasTile(enteringX, enteringY, new Box(level))){
                     Box found;
                     for (TileObject tile : level.tilemap.get(enteringX).get(enteringY).tileObjects) {
@@ -52,7 +52,7 @@ public class Player extends TileObject{
             enteringX = x+1;
             enteringY = y;
             boolean pushableBox = true;
-            if(!checkIfHasTile(enteringX, enteringY, new Wall(level))){
+            if(!(checkIfHasTile(enteringX, enteringY, new Wall(level)) || checkIfHasTile(enteringX, enteringY, new Player(level)))){
                 if(checkIfHasTile(enteringX, enteringY, new Box(level))){
                     Box found;
                     for (TileObject tile : level.tilemap.get(enteringX).get(enteringY).tileObjects) {
@@ -72,7 +72,7 @@ public class Player extends TileObject{
             enteringX = x;
             enteringY = y+1;
             boolean pushableBox = true;
-            if(!checkIfHasTile(enteringX, enteringY, new Wall(level))){
+            if(!(checkIfHasTile(enteringX, enteringY, new Wall(level)) || checkIfHasTile(enteringX, enteringY, new Player(level)))){
                 if(checkIfHasTile(enteringX, enteringY, new Box(level))){
                     Box found;
                     for (TileObject tile : level.tilemap.get(enteringX).get(enteringY).tileObjects) {
@@ -92,7 +92,7 @@ public class Player extends TileObject{
             enteringX = x-1;
             enteringY = y;
             boolean pushableBox = true;
-            if(!checkIfHasTile(enteringX, enteringY, new Wall(level))){
+            if(!(checkIfHasTile(enteringX, enteringY, new Wall(level)) || checkIfHasTile(enteringX, enteringY, new Player(level)))){
                 if(checkIfHasTile(enteringX, enteringY, new Box(level))){
                     Box found;
                     for (TileObject tile : level.tilemap.get(enteringX).get(enteringY).tileObjects) {

@@ -42,5 +42,6 @@ public class WinScreen extends Scene{
         g.setColor(Color.BLACK);
         g.setFont(new Font("Arial", Font.BOLD, 30));
         g.drawString("YOU WIN!!!!!!",Const.screenWidth/2-250,Const.screenHeight/2-200);
+        g.drawString("return to level select",Const.screenWidth/2-250,Const.screenHeight/2+200);
     }
 }
